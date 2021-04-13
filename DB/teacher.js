@@ -1,16 +1,32 @@
 const mongoose = require("mongoose");
 
 const teacherSchema = new mongoose.Schema({
-    name: {
+    email: {
         type: String,
         required: true
     },
-    email: {
+    name: {
         type: String,
         required: true
     },
     contact: {
         type: Number,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    idType: {
+        type: String,
+        required: true
+    },
+    id: { 
+        type: String,
+        required: true
+    },
+    qualification: {
+        type: String,
         required: true
     }
 });
