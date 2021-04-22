@@ -10,15 +10,15 @@ const upload = multer();
 
 dotenv.config();
 
-const port = 3000;
+const port = 5000;
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
 mongoose.connect(
-    process.env.DB_CONNECT, 
-    { useUnifiedTopology: true, useNewUrlParser: true}, 
+    "mongodb+srv://debashish10:arjun@10@cluster0.zpo7i.mongodb.net/usersDB?retryWrites=true&w=majority", 
+    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}, 
     () => console.log('connected to db') 
 );
 

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bodyParser = require('body-parser');
-const Student = require('./DB/student');
+const student = require('./DB/student');
 const Teacher = require('./DB/teacher');
 
 
@@ -8,7 +8,7 @@ const Teacher = require('./DB/teacher');
 //route to post user details to db
 router.post('/student', function(req, res) {
     console.log(req.body);
-    const s_user = new Student({
+    const s_user = new student({
         email: req.body.email,
         name: req.body.name,
         contact: req.body.contact,
